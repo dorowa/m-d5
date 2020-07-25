@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <ul class="list-group">
+        {% for author in object_list %}
+            <li class="list-group-item">
+                {{ author.full_name }}, {{ author.birth_year }}, {{ author.country }}
+            </li>
+        {% endfor%}
+    </ul>
+{% endblock %}

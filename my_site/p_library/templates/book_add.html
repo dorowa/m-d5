@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<p class="h5">Добавить книгу</p>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-warning" value="Сохранить">
+</form>
+{% endblock %}

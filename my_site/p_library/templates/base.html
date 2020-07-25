@@ -1,0 +1,100 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Моя библиотека</title>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row m-0 p-0">
+        <div class="column col-12 text-center p-2" style="background-color: #417690; color: white;">
+            <h3>Моя библиотека</h3>
+        </div>
+    </div>
+    <!-- <div class="d-flex justify-content-between m-1">
+      <a href="/" class="btn btn-success">Начало</a>
+      <a href="/index/" class="btn btn-danger">Изменить</a>
+      <a href="/publishers" class="btn btn-warning">Издатели</a>
+      <a href="/author/create" class="btn btn-dark">Автор(+)</a>
+      <a href="/author/multiple" class="btn btn-dark">Автор(++)</a>
+      <a href="/author/multiple_books" class="btn btn-dark">А+К(++)</a>
+      <a href="/author/list" class="btn btn-dark">Автор(все)</a>
+      <a href="/admin/" class="btn btn-info">Вход</a>
+    </div> -->
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Начало</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Книги</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/book/add">Новая книга</a>
+          <a class="dropdown-item" href="/index/">Добавить копию</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/publishers/">Издатели</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Авторы</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/author/create">Новый автор</a>
+          <a class="dropdown-item" href="/author/multiple">Авторы пакетом</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/author/list">Все авторы</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Долги</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/borrow/new">Выдать книгу</a>
+          <a class="dropdown-item" href="/borrow/list">Все долги</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/borrow/list2">Все долги2</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Друзья</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/friend/add">Добавить друга</a>
+          <a class="dropdown-item" href="/friend/list">Все друзья</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/">Войти</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li> -->
+    </ul>
+    <hr>
+    <div class="d-flex flex-column">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+    <hr>
+    <!-- <div class="d-flex justify-content-between ">
+        <a href="/" class="btn btn-success">Начало</a>
+        <a href="/index/" class="btn btn-danger">Изменить</a>
+        <a href="/publishers" class="btn btn-warning">Издатели</a>
+        <a href="/author/create" class="btn btn-dark">Автор(+)</a>
+        <a href="/author/multiple" class="btn btn-dark">Автор(++)</a>
+        <a href="/author/multiple_books" class="btn btn-dark">А+К(++)</a>
+        <a href="/author/list" class="btn btn-dark">Автор(все)</a>
+        <a href="/admin/" class="btn btn-info">Вход</a>
+    </div> -->
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.5.1.slim.min.js'%}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <ul class="list-group">
+        {% for friend in object_list %}
+            <li class="list-group-item">
+                {{ friend.full_name }}, тел: {{ friend.phone }}, рейтинг: {{ friend.rating }}
+            </li>
+        {% endfor%}
+    </ul>
+{% endblock %}

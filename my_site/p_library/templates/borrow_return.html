@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<p class="h6">Возврат книги</p>
+<hr>
+<p class="h6">Книга: {{ borrow.book.title }},</p>
+<p class="h6">Друг: {{ borrow.friend.full_name }}</p>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-warning" value="Сохранить">
+</form>
+{% endblock %}
